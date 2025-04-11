@@ -18,7 +18,7 @@ async function getWeatherFrom(location) {
     );
 
     if (!response.ok) {
-      throw new Error("Failed to fetch weather data");
+      throw new Error("Invalid input");
     }
 
     const data = await response.json();
@@ -26,13 +26,13 @@ async function getWeatherFrom(location) {
 
     displayWeatherData(weatherData);
   } catch (err) {
-    console.error(err);
+    alert(err);
   }
 }
 
 function getWeatherData(data) {
   const weatherData = {
-    address: data.address,
+    address: data.resolvedAddress.split(",")[0].trim(),
     temp: data.currentConditions.temp,
     conditions: data.currentConditions.conditions,
   };

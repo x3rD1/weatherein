@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100svw;
+  height: 100svh;
+  /* rgb(131, 181, 255) for cards */
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(107, 164, 250);
+  color: white;
+}
+
+.search-container {
+  width: 65%;
+  height: 48px;
+  border-radius: 8px;
+  margin: auto;
+}
+
+form {
+  display: flex;
+  height: 100%;
+  background-color: aliceblue;
+  border-radius: 8px;
+}
+
+#loc {
+  flex-grow: 1;
+  padding: 8px;
+  font-size: large;
+  border: none;
+  border-radius: 8px;
+}
+#loc:focus {
+  outline: none;
+}
+
+button {
+  min-width: 42px;
+  background-color: rgb(75, 75, 238);
+  border: none;
+  color: white;
+  border-radius: 0 8px 8px 0;
+}
+button:hover {
+  background-color: rgb(57, 57, 238);
+}
+
+.current-weather-container,
+.forecast-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 65%;
+  height: 38%;
+  border-radius: 12px;
+  border: 2px solid green;
+  background-color: rgb(142, 186, 253);
+  margin: auto;
+  padding: 1.5rem;
+}
+.main-weather-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 92px;
+  border-radius: 12px;
+  border: 2px solid red;
+}
+
+.city-info {
+  font-size: 20px;
+}
+.city-temp {
+  font-size: 30px;
+}
+.feel {
+  font-size: 20px;
+}
+
+.misc-condition-container {
+  flex-grow: 1;
+  border: 2px solid yellow;
+}
+.misc-condition-container div {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.125rem;
+  height: 100%;
+  border: 2px solid orange;
+}
+
+.misc-condition-container div li {
+  list-style: none;
+  border: 2px solid white;
+  font-size: 1rem;
+  padding: 1rem 0 1rem 2.5rem;
+}
+
+li p:last-child {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.forecast-container .days {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  height: 100%;
+  border: 2px solid orange;
+}
+.forecast-container {
+  height: 40%;
+}
+.days div {
+  border: 2px solid white;
+}
