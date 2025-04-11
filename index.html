@@ -7,14 +7,73 @@
   <script defer src="main.js"></script></head>
   <body>
     <div class="container">
-      <div class="main">
-        <input type="text" id="loc" placeholder="Enter a location" />
-        <button type="click">Submit</button>
+      <div class="search-container">
+        <form>
+          <input type="text" id="loc" placeholder="Search for a city..." />
+          <button type="submit">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-search"
+            >
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+        </form>
       </div>
-      <div class="data">
-        <h2 class="address"></h2>
-        <h1 class="temp"></h1>
-        <p class="condition"></p>
+      <div class="current-weather-container">
+        <div class="main-weather-container">
+          <div class="city-info">
+            <h1 class="city">London</h1>
+            <h3 class="condition">Sunny</h3>
+          </div>
+          <div class="city-temp">
+            <div class="temperature">
+              <h1 class="temperature">19*C</h1>
+              <h3 class="feel">Feels like 37*C</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="misc-condition-container">
+          <div>
+            <li class="humidity-container">
+              <p class="humidity">Humidity</p>
+              <p class="humidity-percentage">61%</p>
+            </li>
+            <li class="wind-speed-container">
+              <p class="wind-speed">Wind speed</p>
+              <p class="wind-speed-value">11 km/h</p>
+            </li>
+            <li class="feels-like-container">
+              <p class="feels-like">Feels like</p>
+              <p class="feels-like-value">37*c</p>
+            </li>
+            <li class="pressure-container">
+              <p class="pressure">Pressure</p>
+              <p class="pressure-value">1003 hPa</p>
+            </li>
+          </div>
+        </div>
+      </div>
+      <div class="forecast-container">
+        <div class="five-day-container">
+          <h1>5-Day Forecast</h1>
+        </div>
+        <div class="days">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
       </div>
     </div>
   </body>
