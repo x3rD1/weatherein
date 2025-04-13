@@ -13,7 +13,7 @@ body {
 .container {
   width: 100%;
   height: 100%;
-  background-color: rgb(107, 164, 250);
+  background-color: rgb(77, 146, 250);
   color: white;
 }
 
@@ -53,6 +53,11 @@ button:hover {
   background-color: rgb(57, 57, 238);
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem 0 1rem 0;
+}
 .current-weather-container,
 .forecast-container {
   display: flex;
@@ -61,8 +66,7 @@ button:hover {
   width: 65%;
   height: 38%;
   border-radius: 12px;
-  border: 2px solid green;
-  background-color: rgb(142, 186, 253);
+  background-color: rgb(119, 170, 247);
   margin: auto;
   padding: 1.5rem;
 }
@@ -72,7 +76,6 @@ button:hover {
   width: 100%;
   height: 92px;
   border-radius: 12px;
-  border: 2px solid red;
 }
 
 .city-info {
@@ -85,23 +88,30 @@ button:hover {
   font-size: 20px;
 }
 
+.temp-container {
+  place-items: end;
+}
+
 .misc-condition-container {
   flex-grow: 1;
-  border: 2px solid yellow;
 }
 .misc-condition-container div {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.125rem;
   height: 100%;
-  border: 2px solid orange;
 }
 
 .misc-condition-container div li {
   list-style: none;
-  border: 2px solid white;
   font-size: 1rem;
   padding: 1rem 0 1rem 2.5rem;
+}
+
+.misc-condition-container div li,
+.day-card {
+  background-color: rgb(147, 187, 247);
+  border-radius: 8px;
 }
 
 li p:last-child {
@@ -114,11 +124,26 @@ li p:last-child {
   grid-template-columns: repeat(5, 1fr);
   gap: 1rem;
   height: 100%;
-  border: 2px solid orange;
 }
 .forecast-container {
   height: 40%;
 }
-.days div {
-  border: 2px solid white;
+.days .day-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.day-card .bottom,
+.day-card .top {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.day-card .bottom {
+  justify-content: space-evenly;
+}
+.day-card .top {
+  flex-direction: column;
 }
