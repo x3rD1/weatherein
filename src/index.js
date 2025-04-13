@@ -39,7 +39,6 @@ async function getWeatherFrom(location) {
 
     const data = await response.json();
     const weatherData = getWeatherData(data);
-    console.log(data);
     displayWeatherData(weatherData);
     displayForecastData(data);
   } catch (err) {
@@ -70,7 +69,6 @@ function getWeatherData(data) {
 }
 
 function displayWeatherData(data) {
-  // const container = document.querySelector('.container');
   const city = document.querySelector(".city");
   const temperature = document.querySelector(".temperature");
   const condition = document.querySelector(".condition");
