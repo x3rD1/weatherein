@@ -106,3 +106,5 @@ function displayForecastData(data) {
     feelsMin.textContent = conversion(day.feelslikemin);
   }
 }
+
+document.addEventListener("DOMContentLoaded", getWeatherFrom("London"));
